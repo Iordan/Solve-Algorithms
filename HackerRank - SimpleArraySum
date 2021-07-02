@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace HackerRankSimpleArraySum
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int lenghtArr = int.Parse(Console.ReadLine());
+            int i;
+            //Took this code from above link
+            string readLine = Console.ReadLine();
+            string[] stringArray = readLine.Split(' '); // splitting array with spaces / in other words expecting numbers to have spaces between each other
+            int[] intArray = new int[1000]; // array initializing 1000 is the maximum number / can be less then this / other slots will be free
+            for (i = 0; i < lenghtArr; i++)
+            {
+                intArray[i] = int.Parse(stringArray[i]);
+            }
+
+
+            int sum = intArray.Sum();
+
+            Console.WriteLine(sum);
+        }
+    }
+}
